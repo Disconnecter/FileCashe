@@ -149,7 +149,7 @@ static SZFileCashe *sharedCash = nil;
                     });
                 }
                 
-                if ([requestResponseData length] < fMaxSize && [requestResponseData length] + fCasheSize < fMaxSize)
+                if ([requestResponseData length] < fMaxSize)
                 {
                     [requestResponseData writeToFile:filePath atomically:YES];
                     fCasheSize += [requestResponseData length];
